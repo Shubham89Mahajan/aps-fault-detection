@@ -21,6 +21,6 @@ def get_collection_as_dataframe(database_name:str, collection_name:str)->pd.Data
             logging.info(f"Dropping column :  _id")
             df = df.drop("_id",axis=1)
         logging.info(f"Rows and columns in df : {df.shape}")
-        return df
+        return df 
     except Exception as e:
         raise SensorException(e, sys)
